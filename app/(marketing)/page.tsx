@@ -59,10 +59,7 @@ import faq from '#data/faq'
 import pricing from '#data/pricing'
 import testimonials from '#data/testimonials'
 
-export const meta: Metadata = {
-  title: 'Saas UI Landingspage',
-  description: 'Free SaaS landingspage starter kit',
-}
+
 
 const Home: NextPage = () => {
   return (
@@ -94,26 +91,24 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                Real imtihonlarga tayyorgarlik — 
+                <Br /> endi osonroq!
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{' '}
-                build intuitive SaaS products with speed.
+                Ideal Study — bu oddiy test emas balki <Em>haqiqiy IELTS, CEFR, Duolingo va fan imtihonlariga</Em>
+                <Br />maksimal yaqin mock exam platformasi. <Br />{' '}
               </FallInPlace>
             }
           >
             <FallInPlace delay={0.8}>
-              <HStack pt="4" pb="12" spacing="8">
-                <NextjsLogo height="28px" /> <ChakraLogo height="20px" />
-              </HStack>
+           <br />
+           <br />
 
               <ButtonGroup spacing={4} alignItems="center">
-                <ButtonLink colorScheme="primary" size="lg" href="/signup">
-                  bot da register qilish
+                <ButtonLink colorScheme="primary" size="lg" href="https://t.me/examregbot">
+                  bot da registratsiya otish
                 </ButtonLink>
               
               </ButtonGroup>
@@ -152,33 +147,33 @@ const HeroSection: React.FC = () => {
         pt="20"
         features={[
           {
-            title: 'Accessible',
+            title: 'To‘liq moslashuvchan',
             icon: FiSmile,
-            description: 'All components strictly follow WAI-ARIA standards.',
+            description: 'Har bir test turini sizning ehtiyojlaringizga moslab sozlang — test turi, muddat, savollar soni va baholash mezonlari.',
             iconPosition: 'left',
             delay: 0.6,
           },
           {
-            title: 'Themable',
+            title: 'Shaxsiylashtirilgan dizayn',
             icon: FiSliders,
             description:
-              'Fully customize all components to your brand with theme support and style props.',
+              'Brendingizga mos test interfeysi — qorong‘i rejim, shaxsiy ranglar va o‘quv markazingiz logotipi bilan ishlaydi.',
             iconPosition: 'left',
             delay: 0.8,
           },
           {
-            title: 'Composable',
+            title: 'Modul tarzda tuzilgan',
             icon: FiGrid,
             description:
-              'Compose components to fit your needs and mix them together to create new ones.',
+              'Testlar bo‘limlar bo‘yicha ajratilgan: Listening, Reading, Writing, Speaking. Har birini alohida ishlatish yoki birlashtirish mumkin.',
             iconPosition: 'left',
             delay: 1,
           },
           {
-            title: 'Productive',
+            title: 'Tez va samarali',
             icon: FiThumbsUp,
             description:
-              'Designed to reduce boilerplate and fully typed, build your product at speed.',
+              'Har bir test avtomatik baholanadi. AI yordamida yozma va og‘zaki javoblar tahlil qilinadi. Barcha jarayonlar maksimal tezlikda amalga oshiriladi.',
             iconPosition: 'left',
             delay: 1.1,
           },
@@ -194,90 +189,51 @@ const HighlightsSection = () => {
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem colSpan={[1, null, 2]} title="Asosiy ">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+            <Em>30 dan ortiq bepul</Em>.
+            va ochiq kodli test modullaridan foydalanishni boshlang.
+CEFR, IELTS, SAT, va boshqa imtihonlar uchun to‘liq ishlovchi bloklar: ro‘yxatdan o‘tish, test topshirish, natijalarni ko‘rish va tahlil qilish.
           </Text>
-
-          <Flex
-            rounded="full"
-            borderWidth="1px"
-            flexDirection="row"
-            alignItems="center"
-            py="1"
-            ps="8"
-            pe="2"
-            bg="primary.900"
-            _dark={{ bg: 'gray.900' }}
-          >
-            <Box>
-              <Text color="yellow.400" display="inline">
-                yarn add
-              </Text>{' '}
-              <Text color="cyan.300" display="inline">
-                @saas-ui/react
-              </Text>
-            </Box>
-            <IconButton
-              icon={hasCopied ? <FiCheck /> : <FiCopy />}
-              aria-label="Copy install command"
-              onClick={onCopy}
-              variant="ghost"
-              ms="4"
-              isRound
-              color="white"
-            />
-          </Flex>
         </VStack>
       </HighlightsItem>
-      <HighlightsItem title="Solid foundations">
+      <HighlightsItem title="Real sharoitda mashq qilish">
         <Text color="muted" fontSize="lg">
-          We don&apos;t like to re-invent the wheel, neither should you. We
-          selected the most productive and established tools in the scene and
-          build Saas UI on top of it.
+        Rasmiy formatdagi testlar. Har bir savol – haqiqiy imtihondan olingan.
         </Text>
       </HighlightsItem>
       <HighlightsTestimonialItem
-        name="Renata Alink"
+        name="Samandar Sariboyev"
         description="Founder"
-        avatar="/static/images/avatar.jpg"
-        gradient={['pink.200', 'purple.500']}
+        avatar="/photo_2025-08-29_00-14-18.jpg"
+        gradient={['white.800', 'black.900']}
       >
-        “Saas UI helped us set up a beautiful modern UI in no time. It saved us
-        hundreds of hours in development time and allowed us to focus on
-        business logic for our specific use-case from the start.”
+        “Mock exam platformasini yaratishdagi maqsadim — o‘quvchilarga haqiqiy imtihon sharoitini taqdim etish edi. Biz yuzlab soatlar davomida tizimni sinab ko‘rdik, mukammallashtirdik va nihoyat shunday yechimni taqdim etdikki, u nafaqat test, balki o‘sish, tahlil va tayyorgarlik uchun ham kuchli vositaga aylandi.
+        Bugun minglab foydalanuvchilar Ideal Study orqali o‘z maqsadlariga yaqinlashmoqda — bu men uchun eng katta faxr.”
       </HighlightsTestimonialItem>
       <HighlightsItem
         colSpan={[1, null, 2]}
-        title="Start your next idea two steps ahead"
+        title="Yangi natijalarga ikki qadam yaqinlashing"
       >
         <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
+        Biz barcha asosiy funksiyalarni siz uchun tayyorladik — endi siz faqat bilimga e’tibor qarating va haqiqiy imtihon tajribasidan rohatlaning.
         </Text>
         <Wrap mt="8">
           {[
-            'authentication',
-            'navigation',
-            'crud',
-            'settings',
-            'multi-tenancy',
-            'layouts',
-            'billing',
-            'a11y testing',
-            'server-side rendering',
-            'documentation',
-            'onboarding',
-            'storybooks',
-            'theming',
-            'upselling',
-            'unit testing',
-            'feature flags',
-            'responsiveness',
+            'IELTS',
+            'CEFR',
+            'Duolingo',
+            'AI baholash',
+            'Sertifikat',
+            'Progress tracking',
+            'Dashboard',
+            'Telegram bot',
+            'Web platforma',
+            'Demo test',
+            'Bepul kirish',
+            'Real ball',
+            'Real savollar',
           ].map((value) => (
             <Tag
               key={value}
@@ -322,27 +278,27 @@ const FeaturesSection = () => {
       iconSize={4}
       features={[
         {
-          title: '1. 🎓 Oddiy test emas — bu real imtihon muhiti',
+          title: '1.  Oddiy test emas — bu real imtihon muhiti',
           icon: FiSmile,
           description:
             'Ideal Study’da testlar oddiy savol-javob yig‘indisi emas. Har bir mock imtihon — bu haqiqiy IELTS, CEFR yoki fan testlariga maksimal darajada o‘xshash muhitda o‘tkaziladi. Siz haqiqiy imtihonga qanday kiradigan bo‘lsangiz — shunday formatda tayyorlanasiz.',
           variant: 'inline',
         },
         {
-          title: '2. 🧪 Barchasi tayyor — siz faqat test topshirasiz',
+          title: '2.  Barchasi tayyor — siz faqat test topshirasiz',
           icon: FiSliders,
           description: (
             <>
               Platformamizda barcha asosiy yo‘nalishlar bo‘yicha testlar mavjud:<Br />
-              🌍 IELTS, CEFR, Duolingo — Listening, Reading, Writing, Speaking<Br />
-              📚 Maktab fanlari: Matematika, Biologiya, Fizika, Tarix, Kimyo...<Br />
-              💼 Professional testlar: Pedagogika, IT, Tilshunoslik, Ta’lim nazariyasi va boshqalar
+               IELTS, CEFR, Duolingo — Listening, Reading, Writing, Speaking<Br />
+               Maktab fanlari: Matematika, Biologiya, Fizika, Tarix, Kimyo...<Br />
+               Professional testlar: Pedagogika, IT, Tilshunoslik, Ta’lim nazariyasi va boshqalar
             </>
           ),
           variant: 'inline',
         },
         {
-          title: '3. ⚡ Natijani kutmang — u darhol tayyor',
+          title: '3.  Natijani kutmang — u darhol tayyor',
           icon: FiGrid,
           description: (
             <>
@@ -355,7 +311,7 @@ const FeaturesSection = () => {
           variant: 'inline',
         },
         {
-          title: '4. 📄 Sertifikat — yakuniy natijangizning isboti',
+          title: '4.  Sertifikat — yakuniy natijangizning isboti',
           icon: FiUserPlus,
           description: (
             <>
@@ -368,7 +324,7 @@ const FeaturesSection = () => {
           variant: 'inline',
         },
         {
-          title: '5. 📈 Progress va diagnostika',
+          title: '5.  Progress va diagnostika',
           icon: FiFlag,
           description: (
             <>
@@ -381,7 +337,7 @@ const FeaturesSection = () => {
           variant: 'inline',
         },
         {
-          title: '6. 🧠 AI baholash — sun’iy intellekt bilan adolatli baho',
+          title: '6.  AI baholash — sun’iy intellekt bilan adolatli baho',
           icon: FiTrendingUp,
           description: (
             <>
@@ -391,20 +347,20 @@ const FeaturesSection = () => {
           variant: 'inline',
         },
         {
-          title: '7. 📱 Istagan joyda, istalgan vaqtda topshiring',
+          title: '7.  Istagan joyda, istalgan vaqtda topshiring',
           icon: FiToggleLeft,
           description: (
             <>
               Ideal Study — doim yoningizda:<Br />
-              🌐 Web platforma: mobilga to‘liq moslashtirilgan<Br />
-              📲 Telegram bot: testlarni tez va qulay tarzda topshiring<Br />
-              🧑‍💻 Pro foydalanuvchilar uchun shaxsiy kabinet (dashboard)
+               Web platforma: mobilga to‘liq moslashtirilgan<Br />
+               Telegram bot: testlarni tez va qulay tarzda topshiring<Br />
+               Pro foydalanuvchilar uchun shaxsiy kabinet (dashboard)
             </>
           ),
           variant: 'inline',
         },
         {
-          title: '8. 🔍 Demo test – bepul sinov',
+          title: '8.  Demo test – bepul sinov',
           icon: FiTerminal,
           description: (
             <>

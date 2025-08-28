@@ -1,12 +1,21 @@
+'use client'
+
 import * as React from 'react'
-import { HTMLMotionProps } from 'framer-motion'
+import { Box, BoxProps } from '@chakra-ui/react'
 
-import { MotionBox, MotionBoxProps } from './box'
+export const PageTransition: React.FC<BoxProps> = (props) => {
+  const [isMounted, setIsMounted] = React.useState(false)
 
-export const PageTransition: React.FC<MotionBoxProps> = (props) => (
-  <MotionBox
-    initial={{ y: -24, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    {...props}
-  />
-)
+  React.useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  return (
+    <Box
+      transform={isMounted ? 'translateY(0)' : 'translateY(-24px)'}
+      opacity={isMounted ? 1 : 0}
+      transition="all 0.3s ease"
+      {...props}
+    />
+  )
+}

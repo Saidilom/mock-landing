@@ -1,40 +1,38 @@
 export default {
-  title: 'Loved by tech people',
+  title: 'Ushbu loyihaga aloqador odamlar',
   items: [
     {
-      name: 'Eelco Wiersma',
-      description: 'Founder Saas UI',
+      name: 'Unlim_Lawe',
+      description: 'fullstack developer',
       avatar:
-        'https://pbs.twimg.com/profile_images/1470742164024008706/k-eXHtu0_normal.jpg',
+        './photo_2025-08-29_00-30-01.jpg',
       children: (
         <>
-          “With SaaS UI I am able to produce high quality dashboard apps and
-          internal tools without a lot of design skills. The ROI really is
-          amazing.”
+          “Mock Exam — bu mening orzularimni amalda sinagan platforma. Har bir sahifa, har bir dizayn foydalanuvchining ishonchi va natijasi uchun ishlab chiqilgan.
+          Endi bu loyiha meniki emas — bu har bir o‘z ustida ishlashni istagan odam uchun ochiq imkoniyatdir.”
         </>
       ),
     },
     {
-      name: 'Caroline Yahaya',
-      description: 'Fullstack Developer',
-      avatar: '/static/images/avatar2.jpg',
+      name: 'Samandar Sariboev',
+      description: 'Backend Developer',
+      avatar: '/photo_2025-08-29_00-14-18.jpg',
       children: (
         <>
-          “Saas UI allows me to build beautiful and functional UI super fast.
-          The components are very well thought out and the Next.js starter kit
-          saved me at least 100 hours of work.”
+          “
+Men o‘zim va atrofimdagi minglab o‘quvchilarning imtihon oldidagi tushkunliklarini ko‘rganman. Shu holatlarga yechim topish niyatida ushbu platformani yaratdim.
+Endi esa u oddiy test emas — bu o‘z ustida ishlash, o‘sish va g‘alabaga bir qadam yaqinlashish maydoniga aylandi.”
         </>
       ),
     },
     {
-      name: 'Alberto Vazquez',
-      description: 'Frontend Engineer',
-      avatar: '/static/images/avatar3.jpg',
+      name: 'Shoislom Baratov',
+      description: 'Director of Ideal Study',
+      avatar: '/photo_2025-08-29_00-37-10.jpg',
       children: (
         <>
-          “Saas UI gave us a perfect starting point for our project, having the
-          storybooks already set up with beautifully crafted components and
-          fully mocked pages was a treat.”
+          “Mock Exam mening shaxsiy yo‘lim, sinovlarim va orzularimning hosilasi. Har bir satr, har bir funksiyada o‘quvchining qulayligi haqida o‘ylangan.
+          Bu loyiha endi mening emas — bu bilim izlovchi har bir inson uchun ochiq eshikdir.”
         </>
       ),
     },

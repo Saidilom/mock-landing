@@ -1,30 +1,30 @@
 import * as React from 'react'
 
 const faq = {
-  title: 'Frequently asked questions',
+  title: 'Tez-tez beriladigan savollar',
   // description: '',
   items: [
     {
-      q: 'How many products can I use Saas UI Pro for?',
+      q: 'Qanday testlar mavjud?',
       a: (
         <>
-          The single license can be used for one commercial application or SaaS
-          product and unlimited internal tools. You can buy as many licenses as
-          you need. <br /> The unlimited license does not have any restrictions.
+          IELTS, CEFR, Duolingo — Listening, Reading, Writing, Speaking
+          Maktab fanlari: Matematika, Biologiya, Fizika, Tarix, Kimyo...
+          Professional testlar: Pedagogika, IT, Tilshunoslik, Ta’lim nazariyasi va boshqalar
         </>
       ),
     },
     {
-      q: 'Can I use Saas UI Pro for client work?',
-      a: "Yes, that's totally up to you, as long as it fits the license you purchase.",
+      q: 'Nega aynan Mock Exam platformasini tanlash kerak?',
+      a: "Chunki bu yerda siz faqat test topshirmaysiz — balki natijangizni tushunasiz, tahlil qilasiz va o‘sasiz. Har bir imtihon real formatda, har bir javob esa aniqlik bilan baholanadi. Bu — o‘rganish jarayonining yangi bosqichi.",
     },
     {
-      q: 'Can I use Saas UI Pro for Open Source projects?',
-      a: 'No currently not. A large part of Saas UI is already released under MIT license. We try to give back to the community as much as possible.',
+      q: 'Sertifikat haqiqiymi? Undan qanday foydalanaman?',
+      a: 'Ha, har bir yakunlangan test bo‘yicha sizga avtomatik PDF sertifikat taqdim etiladi. Uni rezyume, portfolyo, o‘quv markazlari yoki kurslarga taqdim etishingiz mumkin. QR-kod orqali tekshirish ham mumkin.',
     },
     {
-      q: 'Does Saas UI include Figma, Sketch or other design files?',
-      a: 'No, Saas UI does not include any design assets. Maintaining design resources costs a lot of extra effort. We believe small teams can move much faster by designing directly in code, with help of Storybooks.',
+      q: 'Yozma va og‘zaki javoblar qanday baholanadi?',
+      a: 'Yozma (essay) va og‘zaki (speaking) javoblaringiz sun’iy intellekt (AI) yordamida IELTS mezonlariga asoslanib tahlil qilinadi: grammatika, lug‘at boyligi, mazmun va izchillik bo‘yicha to‘liq baho beriladi.',
     },
   ],
 }
