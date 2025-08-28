@@ -1,21 +1,17 @@
-import { MotionBox, MotionBoxProps } from './box'
+import { BoxProps } from '@chakra-ui/react'
 import React from 'react'
 
+import { MotionBox } from './box'
+
 export const Float: React.FC<
-  MotionBoxProps & { delay?: number; steps?: number[] }
+  BoxProps & { delay?: number; steps?: number[] }
 > = (props) => {
-  const { children, delay = 0.2, steps = [10, -10, 10], ...rest } = props
+  const { children, delay = 0.2, ...rest } = props
   return (
     <MotionBox
-      animate={{ translateY: steps }}
-      transition={{
-        delay,
-        duration: 5,
-        ease: 'easeInOut',
-        times: [0, 0.2, 0.5, 0.8, 1],
-        repeat: Infinity,
-        repeatDelay: 0,
-        repeatType: 'reverse',
+      transition={`all 5s ease-in-out ${delay}s infinite`}
+      _hover={{
+        transform: 'translateY(-10px)'
       }}
       {...rest}
     >
