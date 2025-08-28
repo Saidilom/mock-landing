@@ -1,5 +1,11 @@
-import { Box, BoxProps } from '@chakra-ui/react'
+import { ChakraProps, chakra } from '@chakra-ui/react'
+import { HTMLMotionProps, motion } from 'framer-motion'
 
-export const MotionBox: React.FC<BoxProps> = (props) => {
-  return <Box {...props} />
+export interface MotionBoxProps
+  extends Omit<HTMLMotionProps<'div'>, 'children' | 'style'>,
+    Omit<ChakraProps, 'transition' | 'color'> {
+  children?: React.ReactNode
 }
+
+
+export const MotionBox = motion.create(chakra.div)

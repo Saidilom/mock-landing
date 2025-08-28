@@ -15,11 +15,11 @@ import { Link } from '@saas-ui/react'
 import useRouteChanged from 'hooks/use-route-changed'
 import { usePathname } from 'next/navigation'
 import { AiOutlineMenu } from 'react-icons/ai'
-import { RemoveScroll } from 'react-remove-scroll'
 
 import * as React from 'react'
 
 import { Logo } from '#components/layout/logo'
+import { useScrollPosition } from 'hooks/use-scroll-position'
 import siteConfig from '#data/config'
 
 interface NavLinkProps extends LinkProps {
@@ -30,10 +30,11 @@ interface NavLinkProps extends LinkProps {
 
 function NavLink({ href, children, isActive, ...rest }: NavLinkProps) {
   const pathname = usePathname()
+  const { currentSection } = useScrollPosition()
   const bgActiveHoverColor = useColorModeValue('gray.100', 'whiteAlpha.100')
 
   const [, group] = href?.split('/') || []
-  isActive = isActive ?? pathname?.includes(group)
+  isActive = isActive ?? (pathname?.includes(group) || (href?.includes('#') && currentSection === href.split('#')[1]))
 
   return (
     <Link
@@ -55,7 +56,7 @@ function NavLink({ href, children, isActive, ...rest }: NavLinkProps) {
     >
       {children}
     </Link>
-  )
+    )
 }
 
 interface MobileNavContentProps {
@@ -94,44 +95,42 @@ export function MobileNavContent(props: MobileNavContentProps) {
   return (
     <>
       {isOpen && (
-        <RemoveScroll forwardProps>
-          <Flex
-            direction="column"
-            w="100%"
-            bg={bgColor}
-            h="100vh"
-            overflow="auto"
-            pos="absolute"
-            inset="0"
-            zIndex="modal"
-            pb="8"
-            backdropFilter="blur(5px)"
-          >
-            <Box>
-              <Flex justify="space-between" px="8" pt="4" pb="4">
-                <Logo />
-                <HStack spacing="5">
-                  <CloseButton ref={closeBtnRef} onClick={onClose} />
-                </HStack>
-              </Flex>
-              <Stack alignItems="stretch" spacing="0">
-                {siteConfig.header.links.map(
-                  ({ href, id, label, ...props }, i) => {
-                    return (
-                      <NavLink
-                        href={href || `/#${id}`}
-                        key={i}
-                        {...(props as any)}
-                      >
-                        {label}
-                      </NavLink>
-                    )
-                  },
-                )}
-              </Stack>
-            </Box>
-          </Flex>
-        </RemoveScroll>
+        <Flex
+          direction="column"
+          w="100%"
+          bg={bgColor}
+          h="100vh"
+          overflow="auto"
+          pos="absolute"
+          inset="0"
+          zIndex="modal"
+          pb="8"
+          backdropFilter="blur(5px)"
+        >
+          <Box>
+            <Flex justify="space-between" px="8" pt="4" pb="4">
+              <Logo />
+              <HStack spacing="5">
+                <CloseButton ref={closeBtnRef} onClick={onClose} />
+              </HStack>
+            </Flex>
+            <Stack alignItems="stretch" spacing="0">
+              {siteConfig.header.links.map(
+                ({ href, id, label, ...props }, i) => {
+                  return (
+                    <NavLink
+                      href={href || `/#${id}`}
+                      key={i}
+                      {...(props as any)}
+                    >
+                      {label}
+                    </NavLink>
+                  )
+                },
+              )}
+            </Stack>
+          </Box>
+        </Flex>
       )}
     </>
   )

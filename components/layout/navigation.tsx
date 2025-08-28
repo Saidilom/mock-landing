@@ -1,6 +1,5 @@
 import { HStack } from '@chakra-ui/react'
 import { useDisclosure, useUpdateEffect } from '@chakra-ui/react'
-import { useScrollSpy } from 'hooks/use-scrollspy'
 import { usePathname, useRouter } from 'next/navigation'
 
 import * as React from 'react'
@@ -8,6 +7,7 @@ import * as React from 'react'
 import { MobileNavButton } from '#components/mobile-nav'
 import { MobileNavContent } from '#components/mobile-nav'
 import { NavLink } from '#components/nav-link'
+import { useScrollPosition } from 'hooks/use-scroll-position'
 import siteConfig from '#data/config'
 
 import ThemeToggle from './theme-toggle'
@@ -16,14 +16,7 @@ const Navigation: React.FC = () => {
   const mobileNav = useDisclosure()
   const router = useRouter()
   const path = usePathname()
-  const activeId = useScrollSpy(
-    siteConfig.header.links
-      .filter(({ id }) => id)
-      .map(({ id }) => `[id="${id}"]`),
-    {
-      threshold: 0.75,
-    },
-  )
+  const { currentSection } = useScrollPosition()
 
   const mobileNavBtnRef = React.useRef<HTMLButtonElement>()
 
@@ -41,7 +34,7 @@ const Navigation: React.FC = () => {
             key={i}
             isActive={
               !!(
-                (id && activeId === id) ||
+                (id && currentSection === id) ||
                 (href && !!path?.match(new RegExp(href)))
               )
             }

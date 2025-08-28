@@ -58,10 +58,12 @@ import { Em } from '#components/typography'
 import faq from '#data/faq'
 import pricing from '#data/pricing'
 import testimonials from '#data/testimonials'
-
+import { useScrollPosition } from 'hooks/use-scroll-position'
 
 
 const Home: NextPage = () => {
+  const { currentSection } = useScrollPosition()
+  
   return (
     <Box>
       <HeroSection />
