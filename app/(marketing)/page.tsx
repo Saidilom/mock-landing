@@ -217,7 +217,7 @@ CEFR, IELTS, SAT, va boshqa imtihonlar uchun to‘liq ishlovchi bloklar: ro‘yx
       <HighlightsTestimonialItem
         name="Samandar Sariboyev"
         description="Founder"
-        avatar="/photo_2025-08-29_00-14-18.jpg"
+        avatar="/photo_2025-08-30_02-20-18.jpg"
         gradient={['white.800', 'black.900']}
       >
         “Mock exam platformasini yaratishdagi maqsadim — o‘quvchilarga haqiqiy imtihon sharoitini taqdim etish edi. Biz yuzlab soatlar davomida tizimni sinab ko‘rdik, mukammallashtirdik va nihoyat shunday yechimni taqdim etdikki, u nafaqat test, balki o‘sish, tahlil va tayyorgarlik uchun ham kuchli vositaga aylandi.
