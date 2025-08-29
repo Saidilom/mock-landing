@@ -85,7 +85,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 15, lg: 30 }} pb={{ base: 10, lg: 40 }}>
+      <Container maxW="container.xl" pt={{ base: 36, lg: 30 }} pb={{ base: 0, lg: 40 }}>
         <Stack direction={{ base: 'column', lg: 'row' }} alignItems="center">
           <Hero
             id="home"
@@ -117,15 +117,17 @@ const HeroSection: React.FC = () => {
             </FallInPlace>
           </Hero>
           <Box
-            height={{ base: '300px', lg: '100px' }}
+            height={{ base: '400px', lg: '100px' }}
             position={{ base: 'relative', lg: 'absolute' }}
             display="block"
             left={{ lg: '35%', xl: '40%' }}
             top={{ lg: '30px' }}
-            width={{ base: '100%', lg: '80vw' }}
+            width={{ base: '100vw', lg: '80vw' }}
             maxW="1100px"
-            margin="0 auto"
-            mt={{ base: 4, lg: 0 }}
+            margin={{ base: '0', lg: '0 auto' }}
+            mt={{ base: 0, lg: 0 }}
+            ml={{ base: '-4', lg: 0 }}
+            mr={{ base: '-4', lg: 0 }}
           >
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
@@ -139,7 +141,7 @@ const HeroSection: React.FC = () => {
                   style={{
                     width: '100%',
                     height: 'auto',
-                    transform: 'scale(1.1)',
+                    transform: 'scale(1.0)',
                   }}
                 />
               </Box>
