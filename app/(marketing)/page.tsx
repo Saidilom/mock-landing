@@ -85,7 +85,7 @@ const HeroSection: React.FC = () => {
   return (
     <Box position="relative" overflow="hidden">
       <BackgroundGradient height="100%" zIndex="-1" />
-      <Container maxW="container.xl" pt={{ base: 10, lg: 30 }} pb="40">
+      <Container maxW="container.xl" pt={{ base: 15, lg: 30 }} pb={{ base: 10, lg: 40 }}>
         <Stack direction={{ base: 'column', lg: 'row' }} alignItems="center">
           <Hero
             id="home"
@@ -117,23 +117,30 @@ const HeroSection: React.FC = () => {
             </FallInPlace>
           </Hero>
           <Box
-            height="600px"
-            position="absolute"
-            display={{ base: 'none', lg: 'block' }}
-            left={{ lg: '60%', xl: '55%' }}
-            width="80vw"
+            height={{ base: '300px', lg: '100px' }}
+            position={{ base: 'relative', lg: 'absolute' }}
+            display="block"
+            left={{ lg: '35%', xl: '40%' }}
+            top={{ lg: '30px' }}
+            width={{ base: '100%', lg: '80vw' }}
             maxW="1100px"
             margin="0 auto"
+            mt={{ base: 4, lg: 0 }}
           >
             <FallInPlace delay={1}>
               <Box overflow="hidden" height="100%">
                 <Image
-                  src="/static/screenshots/list.png"
+                  src="/основ.png"
                   width={1200}
                   height={762}
                   alt="Screenshot of a ListPage in Saas UI Pro"
                   quality="75"
                   priority
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    transform: 'scale(1.1)',
+                  }}
                 />
               </Box>
             </FallInPlace>
