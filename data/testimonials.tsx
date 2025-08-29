@@ -5,7 +5,7 @@ export default {
       name: 'Unlim_Lawe',
       description: 'fullstack developer',
       avatar:
-        './photo_2025-08-29_00-30-01.jpg',
+        './photo_2025-08-30_02-18-54.jpg',
       children: (
         <>
           “Mock Exam — bu mening orzularimni amalda sinagan platforma. Har bir sahifa, har bir dizayn foydalanuvchining ishonchi va natijasi uchun ishlab chiqilgan.
@@ -16,7 +16,7 @@ export default {
     {
       name: 'Samandar Sariboev',
       description: 'Backend Developer',
-      avatar: '/photo_2025-08-29_00-14-18.jpg',
+      avatar: '/photo_2025-08-30_02-20-18.jpg',
       children: (
         <>
           “
